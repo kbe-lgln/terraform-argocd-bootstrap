@@ -84,6 +84,13 @@ variable "argocd_git_private_key" {
   default     = ""
 }
 
+variable "argocd_registry_credentials" {
+  description = "Private Registry Credentials"
+  type        = string
+  sensitive   = true
+  default     = ""
+}
+
 variable "argocd_project_source_repo_url" {
   description = "Git repository URL where the App of Apps Helm Chart resides."
   type        = string

@@ -1,0 +1,10 @@
+{{- if ne .Values.projects.registryCred "" }}
+{{ $cred := .Values.projects.registryCred }}
+{{ $project := .Values.projects.infrastructure }}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-registry-{{ $project.name }}
+data:
+  .dockerconfigjson: {{ printf $cred }}
+{{- end }}

@@ -74,6 +74,7 @@ resource "helm_release" "argocd" {
         password = var.argocd_git_access_token
         pkey     = var.argocd_git_private_key
       }
+      registryCred = var.argocd_registry_credentials
     }
     argo-cd = {
       controller = local.argocd_settings
