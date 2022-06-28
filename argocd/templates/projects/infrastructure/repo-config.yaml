@@ -18,5 +18,5 @@ data:
   username: {{ printf .Values.projects.gitToken.name | b64enc }}
   {{- end }}
   {{- if ne .Values.projects.gitToken.pkey "" }}
-  sshPrivateKey: : {{ printf .Values.projects.gitToken.pkey }}
+  sshPrivateKey: {{ printf .Values.projects.gitToken.pkey }}
   {{- end }}
