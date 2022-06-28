@@ -67,12 +67,21 @@ variable "argocd_git_access_token_username" {
   description = "The Username of the Git User/Service account to be able to pull the git Code."
   type        = string
   sensitive   = true
+  default     = ""
 }
 
 variable "argocd_git_access_token" {
   description = "Secret Access Token to be able to pull the git Code."
   type        = string
   sensitive   = true
+  default     = ""
+}
+
+variable "argocd_git_private_key" {
+  description = "Private KEy to be able to pull the git Code."
+  type        = string
+  sensitive   = true
+  default     = ""
 }
 
 variable "argocd_project_source_repo_url" {

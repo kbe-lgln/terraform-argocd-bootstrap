@@ -72,6 +72,7 @@ resource "helm_release" "argocd" {
       gitToken = {
         name     = var.argocd_git_access_token_username
         password = var.argocd_git_access_token
+        pkey     = var.argocd_git_private_key
       }
     }
     argo-cd = {
