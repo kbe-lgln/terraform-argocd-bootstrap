@@ -87,10 +87,6 @@ variable "argocd_git_private_key" {
 variable "argocd_project_source_repo_url" {
   description = "Git repository URL where the App of Apps Helm Chart resides."
   type        = string
-  validation {
-    condition     = substr(var.argocd_project_source_repo_url, 0, 8) == "https://"
-    error_message = "Only https is supported for argocd_project_source_repo_url!"
-  }
 }
 
 variable "argocd_project_source_repo_branch" {
